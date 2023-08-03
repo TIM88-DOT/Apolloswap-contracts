@@ -59,7 +59,7 @@ describe("ApolloswapFactory", () => {
     // const pair = await ethers.getContractFactory("ApolloswapPair");
     // expect(ethers.utils.keccak256(pair.bytecode)).to.be.eq(codehash);
     expect(codehash).to.be.eq(
-      "0x443533a897cfad2762695078bf6ee9b78b4edcda64ec31e1c83066cee4c90a7e",
+      "0xac1421ae05e4ea125deaf069ec630502920f759e7538e54ace9b545518130871",
     );
   });
 
@@ -80,7 +80,7 @@ describe("ApolloswapFactory", () => {
     const { factory } = await loadFixture(fixture);
     const tx = await factory.createPair(...TEST_ADDRESSES);
     const receipt = await tx.wait();
-    expect(receipt!.gasUsed).to.eq(2356517);
+    expect(receipt!.gasUsed).to.eq(2356715);
   });
 
   it("setFeeTo", async () => {

@@ -34,7 +34,7 @@ library ApolloswapLibrary {
                             bytes1(0xff),
                             factory,
                             keccak256(abi.encodePacked(token0, token1)),
-                            hex"443533a897cfad2762695078bf6ee9b78b4edcda64ec31e1c83066cee4c90a7e" // init code hash
+                            hex"ac1421ae05e4ea125deaf069ec630502920f759e7538e54ace9b545518130871" // init code hash
                         )
                     )
                 )
