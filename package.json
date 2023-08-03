@@ -1,0 +1,69 @@
+{
+  "name": "apolloswap",
+  "description": "Apolloswap contracts",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "uniswap",
+    "ethereum",
+    "v2",
+    "core",
+    "uniswap-v2"
+  ],
+  "files": [
+    "contracts",
+    "!contracts/test",
+    "typechain-types",
+    "!typechain-types/test",
+    "artifacts/contracts",
+    "!artifacts/test",
+    "!artifacts/contracts/**/*.dbg.json"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "chai": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.46.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.17.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^3.0.0",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^3.4.1",
+    "solidity-coverage": "^0.8.1",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.3.1",
+    "typescript": "^5.1.6"
+  },
+  "scripts": {
+    "lint": "prettier --plugin=prettier-plugin-solidity --check src 'contracts/**/*.sol' && solhint 'contracts/**/*.sol'",
+    "lint:fix": "prettier --plugin=prettier-plugin-solidity --write src 'contracts/**/*.sol'",
+    "clean": "rimraf artifacts cache types",
+    "precompile": "pnpm run clean",
+    "compile": "hardhat compile",
+    "build": "pnpm run compile",
+    "test": "hardhat test",
+    "prepublishOnly": "pnpm run test"
+  },
+  "license": "GPL-3.0-or-later",
+  "packageManager": "pnpm@8.6.10",
+  "prettier": {
+    "trailingComma": "all"
+  }
+}
